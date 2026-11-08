@@ -1,0 +1,11 @@
+#!/bin/sh
+# Runs luau-crap from anywhere; symlink this file onto your PATH.
+self=$0
+while [ -L "$self" ]; do
+	link=$(readlink "$self")
+	case $link in
+	/*) self=$link ;;
+	*) self=$(dirname "$self")/$link ;;
+	esac
+done
+exec lune run "$(dirname "$self")/../src/main.luau" "$@"
