@@ -53,3 +53,7 @@ no source files is an error, not a pass), 2 over the threshold, 3 the tests fail
 lune run tests/run
 lune run src/main.luau --threshold 10    # the tool's own gate
 ```
+
+## License
+
+MIT. See [LICENSE](LICENSE).
